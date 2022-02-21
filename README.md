@@ -10,19 +10,19 @@ Part 3: Finding a run-time bug with convert.cpp
 - Using Classes, Objects, and Methods to build a Tic-Tac-Toe Game
 
 **Lab 3** - **Command Line Parser**
-- Programmed the Command Line Parser by using:\
-&nbsp;1. C++ I/O streams, including Error Handling\
-&nbsp;2. Classes with constructors, accessors and mutators\
+- Programmed the Command Line Parser by using:
+&nbsp;1. C++ I/O streams, including Error Handling
+&nbsp;2. Classes with constructors, accessors and mutators
 &nbsp;3. Dynamic Allocation and De-allocation of One-dimensional arrays
 
 **Lab 4** - **Linked List**
-- Programmed a Command Parser that create shapes, create groups of shapes, move shapes across groups, and delete shapes/groups.\
-- Programmed the Command Line Parser by using:\
-&nbsp;1. C++ I/O streams, including Error Handling\
+- Programmed a Command Parser that create shapes, create groups of shapes, move shapes across groups, and delete shapes/groups.
+- Programmed the Command Line Parser by using:
+&nbsp;1. C++ I/O streams, including Error Handling
 &nbsp;2. Classes with constructors, accessors and mutators
 &nbsp;3. Linked Lists
 
 **Lab 5** - **Inheritance and Virtual Functions**
-- Provided with a "high-level" decision making framework of the program that implements a database of shapes in the form of an object file.\
+- Provided with a "high-level" decision making framework of the program that implements a database of shapes in the form of an object file.
 - Added new functionalities by creating new Clasess(Circles, Triangle, and Rectangle) through virtual functions without changing the code of the framework.
 
