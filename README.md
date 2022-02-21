@@ -1,4 +1,5 @@
 # ECE244---Programming-Fundamentals
+Lab Projects completed in C++ Programming language at the University of Toronto in Fall 2021.
 
 ### Lab Overview
 Lab 1 - Debugging Code using Breakpoints and Debugging tools in NetBeans
