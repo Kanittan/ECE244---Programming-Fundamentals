@@ -30,11 +30,8 @@ int shapeCount = 0;
 // The value of the argument to the maxShapes command
 int max_shapes;
 
-// ECE244 Student: you may want to add the prototype of
-// helper functions you write here
 
 // Helper Functions#1 - #5: Check if inputted argument is of CORRECT TYPE
-
 int findName(Shape **shapesArray, string name, int shapeCount); //NOT SURE IF ARGUMENT IS CORRECT //Return "index i" of array, that is the object that has the inducated name. ELSE Return -1 if NO match NAME inside every index of array (in every object) were found.
 bool nameValid(string name);
  bool nameNotExist(Shape **shapesArray, string name, int shapeCount);
@@ -90,7 +87,7 @@ int main() {
         
         string a;
         string newLine = "";
-//        string commandString;
+     
         int count = 0;
         int i = 0;
         bool isError = false;
@@ -120,10 +117,7 @@ int main() {
         // The only way this can fail is if the eof is encountered
 //        lineStream >> command; //GIVEN THIS LINE BY DEFAULT
         
-        
-        // Check for the command and act accordingly
-        // ECE244 Student: Insert your code here
-        
+        // Check for the command and act accordingly 
         // 1st Priority: ERROR#1: INVALID COMMAND (1st Word entered DOES NOT MATCH one of the valid commands)
         if(!((command == "maxShapes") || (command == "create") || (command == "move") || (command == "rotate") || (command == "draw") || (command == "delete")))
         {
@@ -146,11 +140,6 @@ int main() {
                   // Count Number of argument (For ERROR#8: Too many argument and ERROR#9: Too few argument
           
           //Priority#2: ERROR#2: CHECK FOR INVALID ARGUMENT
-
-          // if((lineStream.fail() == true) && (lineStream.peek() == '.') && (shapeNumValid(max_shapes) == false))
-          // {
-          //   cout << "invalid argument";
-          // }
           
           if(isError == true)
           {
@@ -171,14 +160,9 @@ int main() {
           {
               cout << "New database: max shapes is " << (int)double_max_shapes << endl;
            // Valid Input: Input is Integer
-//            Shape **shapesArray = new Shape *[(int)double_max_shapes];
               shapesArray = new Shape*[(int)double_max_shapes];
               
               maxShapePtr = &double_max_shapes;
-//             for (int i=0; i < (int)double_max_shapes; ++i)
-//             {
-//               shapesArray[i] = new Shape("","",0,0,0,0);
-//             }
           }
           
         }
@@ -189,7 +173,6 @@ int main() {
           lineStream >> name;
           if((lineStream.fail() == true) && (1 < *countPtr))
           {
-//              cout << "ERROR 1" << endl;
               isError = true;
               
           }
@@ -197,14 +180,12 @@ int main() {
           lineStream >> type;
           if((lineStream.fail() == true) && (2 < *countPtr))
           {
-//              cout << "ERROR 2" << endl;
               isError = true;
           }
           
           lineStream >> loc_x;
           if(((lineStream.fail() == true) || (checkValidArgument(loc_x)== false)) && (3 < *countPtr))
           {
-//              cout << "ERROR 3" << endl;
               isError = true;
           }
           
@@ -212,21 +193,18 @@ int main() {
           
           if(((lineStream.fail() == true) || (checkValidArgument(loc_y)== false)) && (4 < *countPtr))
           {
-//              cout << "ERROR 4" << endl;
               isError = true;
           }
           
           lineStream>> size_x;
           if(((lineStream.fail() == true) || (checkValidArgument(size_x)== false)) && (5 < *countPtr))
           {
-//              cout << "ERROR 5" << endl;
               isError = true;
           }
           
           lineStream>> size_y;
           if(((lineStream.fail() == true) || (checkValidArgument(size_y)== false)) && (6 < *countPtr))
           {
-//              cout << "ERROR 6" << endl;
               isError = true;
           }
           
@@ -303,21 +281,18 @@ int main() {
         lineStream >> name;
         if((lineStream.fail() == true) && (1 < *countPtr))
         {
-//          cout << "ERROR 1" << endl;
             isError = true;       
         }
         
         lineStream >> loc_x;
         if(((lineStream.fail() == true) || (checkValidArgument(loc_x)== false)) && (2 < *countPtr))
         {
-//          cout << "ERROR 3" << endl;
             isError = true;
         }
         
         lineStream >> loc_y;
         if(((lineStream.fail() == true) || (checkValidArgument(loc_y)== false)) && (3 < *countPtr))
         {
-//          cout << "ERROR 3" << endl;
             isError = true;
         }
         
@@ -339,8 +314,6 @@ int main() {
         else if(findNameIndex == -1)
         {
           cout << "Error: shape " << name << " not found" << endl;
-//          cin.ignore(10000, '\n');
-//          continue;
         }
         
         // CHECK ERROR#7: Invalid Value
@@ -377,14 +350,12 @@ int main() {
         
         if((lineStream.fail() == true) && (1 < *countPtr))
         {
-//          cout << "ERROR 3" << endl;
             isError = true;
         }
         
         lineStream >> angle;
         if(((lineStream.fail() == true) || (checkValidArgument(angle)== false)) && (2 < *countPtr))
         {
-//          cout << "ERROR 3" << endl;
             isError = true;
         }
         
@@ -438,7 +409,6 @@ int main() {
         
         if((lineStream.fail() == true) && (1 < *countPtr))
         {
-//          cout << "ERROR 3" << endl;
             isError = true;
         }
         
@@ -527,7 +497,6 @@ int main() {
           lineStream >> name;
           if((lineStream.fail() == true) && (1 < *countPtr))
           {
-//          cout << "ERROR 3" << endl;
             isError = true;
           }
           
@@ -569,15 +538,7 @@ int main() {
 
               }
             }
-//              for(int i=0 ; i<shapeCount; i++)
-//              {
-//                  delete shapesArray[i];
-//                  shapesArray[i] = NULL;
-//                  
-//                  
-//              }
-//                  delete [] shapesArray;
-//                  shapesArray = nullptr;
+
           }
           else //Delete individual name
           {
@@ -618,9 +579,6 @@ int main() {
                   cout << "Deleted shape " << name << endl;
                   delete shapesArray[findNameIndex];
                   shapesArray[findNameIndex] = NULL;
-                  
-//                  delete [] shapesArray;
-//                  shapesArray = nullptr;
               }
           }
       }
